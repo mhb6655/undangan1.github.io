@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Khadafi & Emi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Menghubungkan ke file CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HERO / COVER SECTION -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <p class="hero-subtitle">The Wedding of</p>
+            <h1 class="hero-title animate-fade-in">Khadafi & Emi</h1>
+            <p class="hero-date">Minggu, 07 Juni 2026</p>
+            <a href="#acara" class="btn-primary">Buka Undangan</a>
+        </div>
+    </header>
+
+    <!-- 2. MEMPELAI SECTION -->
+    <section class="container text-center py-20">
+        <h2 class="section-title">Mempelai</h2>
+        <p class="section-quote">"Maka mulailah kisah baru kami untuk saling melengkapi dan menjaga satu sama lain."</p>
+        
+        <div class="mempelai-grid">
+            <!-- Mempelai Pria -->
+            <div class="mempelai-card">
+                <h3 class="mempelai-name">Muammar khadafi</h3>
+                <p class="mempelai-parents">Putra dari Bpk Jawani(Alm) & Ibu Hawami</p>
+            </div>
+            <!-- Mempelai Wanita -->
+            <div class="mempelai-card">
+                <h3 class="mempelai-name">Emi farijah</h3>
+                <p class="mempelai-parents">Putri dari Bpk Zulkifli.H.S & Ibu Nurhayati</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COUNTDOWN TIMER SECTION -->
+    <section class="countdown-section">
+        <h2 class="countdown-title">Menuju Hari Bahagia</h2>
+        <div class="countdown-container">
+            <div class="countdown-box">
+                <span id="days" class="countdown-number">00</span>
+                <span class="countdown-label">Hari</span>
+            </div>
+            <div class="countdown-box">
+                <span id="hours" class="countdown-number">00</span>
+                <span class="countdown-label">Jam</span>
+            </div>
+            <div class="countdown-box">
+                <span id="minutes" class="countdown-number">00</span>
+                <span class="countdown-label">Menit</span>
+            </div>
+            <div class="countdown-box">
+                <span id="seconds" class="countdown-number">00</span>
+                <span class="countdown-label">Detik</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ACARA SECTION (INFO & MAPS) -->
+    <section id="acara" class="container py-20">
+        <div class="text-center mb-16">
+            <h2 class="section-title">Informasi Acara</h2>
+            <p class="section-desc">Kapan dan di mana momen bahagia kami dilaksanakan</p>
+        </div>
+
+        <div class="acara-grid">
+            <!-- Akad/Pemberkatan -->
+            <div class="acara-card">
+                <div class="badge">Mandi Pucuk</div>
+                <p class="acara-time">SABTU 06 JUNI 2026</p>
+                <p class="acara-location">Pukul 09.00 WIB S/D-selesai</p>
+                <p class="acara-location">Gampong Balee<br>Kec.Meureubo, Kab.Aceh Barat</p>           </div>
+            <!-- Resepsi -->
+            <div class="acara-card">
+                <div class="badge">Resepsi</div>
+                <p class="acara-time">MINGGU 07 JUNI 2026</p>
+                <p class="acara-location">Pukul 10.00 WIB S/D-selesai</p>
+                <p class="acara-location">Gampong Balee<br>Kec.Meureubo, Kab.Aceh Barat</p>
+            </div>
+        </div>
+
+        <!-- Tombol Google Maps -->
+        <div class="text-center">
+            <a href="https://www.google.com/maps/place/UD.+Emifa+tailor/@4.1956943,96.2098,700m/data=!3m1!1e3!4m6!3m5!1s0x303ec50034d01f71:0x7a8c73ecf2e24e5d!8m2!3d4.1956924!4d96.2097984!16s%2Fg%2F11x7slcbbp?hl=id&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Buka Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p class="footer-logo">Khadafi & Emi</p>
+        <p>&copy; 2026. Made with love.</p>
+        <p> BY: STORYFOTO</p>
+        <p> WA: 0881010855087</p>
+    </footer>
+
+    <!-- JAVASCRIPT UNTUK COUNTDOWN -->
+    <script>
+        const targetDate = new Date(2026, 5, 8, 9, 0, 0).getTime();
+
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+            if (difference < 0) {
+                clearInterval(countdown);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
